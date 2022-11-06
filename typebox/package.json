@@ -1,0 +1,22 @@
+{
+  "name": "typebox",
+  "version": "1.0.0",
+  "description": "## Outline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sinclair/typebox": "^0.24.42",
+    "ajv": "^8.11.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "prettier": {
+    "printWidth": 80
+  }
+}

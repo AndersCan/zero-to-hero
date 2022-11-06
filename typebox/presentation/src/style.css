@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+} */
+
+#app {
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+}
+.default-white {
+  color: #f5fffa;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100vw;
+  /* 16/9 */
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  /* 16/10 */
+  /* height:width ratio = 10/16 = .625  */
+  /* height: 62.5vw;  */
+}
+
+.main {
+  width: 100vw;
+  /* 16/9 */
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+
+  /* 16/10 */
+  /* height:width ratio = 10/16 = .625  */
+  /* height: 62.5vw;  */
+
+  max-height: 100vh;
+  /* 16/9 = 1.778 */
+  /* max-width: 177.78vh; */
+  /* 16/10 = 1.6 */
+  /* max-width: 160vh; */
+
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0; /* vertical center */
+  left: 0;
+  right: 0; /* horizontal center */
+
+  overflow: hidden;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  background-color: #32292f;
+}
+
+.border-gradient {
+  border: 1vw solid;
+  border-image: linear-gradient(var(--angle), #f5fffa, #32292f) 1;
+}
+.border-animation {
+  --angle: 0deg;
+  /* border-image: linear-gradient(var(--angle), green, yellow) 1; */
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* TEXT */
+
+.slide-normal {
+  font-size: 2vw;
+}
+.slide-normal\+ {
+  font-size: 3.5vw;
+}
+.slide-l {
+  font-size: 5vw;
+}
+
+.slide-xl {
+  font-size: 7vw;
+}
+
+small {
+  font-size: 0.3em;
+}
+
+.slide p {
+  font-size: 0.4em;
+}
+
+.slide em {
+  font-weight: 700;
+  color: #fedc97;
+}
+
+.spacer {
+  margin: 1em;
+}
