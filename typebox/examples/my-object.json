@@ -1,0 +1,4 @@
+{
+  "$schema": "./my-schema.json",
+  "_": "Try autocomplete here - name and age will show up!"
+}

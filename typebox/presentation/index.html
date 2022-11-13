@@ -5,11 +5,30 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
+  <title>TypeBox Presentation</title>
+  <style>
+    @font-face {
+      font-family: "Virgil";
+      src: url("https://excalidraw.com/Virgil.woff2");
+    }
+
+    @font-face {
+      font-family: "Cascadia";
+      src: url("https://excalidraw.com/Cascadia.woff2");
+    }
+  </style>
 </head>
 
 <body class="">
   <main class="" id="app"></main>
+  <div aria-hidden="true" class="grid place-content-center absolute top-0 text-lg pointer-events-none z-10"
+    id="trailer">
+    <div class="relative">
+      <span id="trailer-icon-ball" class="absolute text-xl">🔮</span>
+      <span id="trailer-icon-wizard"
+        class="absolute w-[1em] h-[2em] rounded-full backdrop-blur-sm bg-white/30 text-xl border ">🧙‍♂️</span>
+    </div>
+  </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

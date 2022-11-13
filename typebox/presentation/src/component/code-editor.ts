@@ -19,7 +19,7 @@ export class CodeEditor extends HTMLElement {
         throw new Error("missing container");
       }
       //
-      initEditor(el, this.code, (code) => this.onCodeChange(code));
+      initEditor(el, this.code, (code) => debouncex(code));
 
       // There are two ways of initializing a preview, you can give it either an
       // iframe element or a selector of an element to create an iframe on.
@@ -53,17 +53,17 @@ export class CodeEditor extends HTMLElement {
   setup() {
     render(
       html`
-        <div class="main border-gradient border-animation flex">
+        <div class="xgrid xgrid--2x1 flex flex-col">
           <div
             data-editor="container"
-            class="bg-[#43373E] text-[#F5FFFA] w-full h-full slide-normal"
+            class="bg-[#43373E] text-[#F5FFFA] text-sm overflow-scroll h-[30vh]"
           ></div>
-          <div class="spacer"></div>
-          <iframe
-            class="slide-normal+ min-w-[50%]"
-            id="${this.iframeId}"
-            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-          ></iframe>
+          <div class="h-[25vh] border-t-2">
+            <iframe
+              id="${this.iframeId}"
+              sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+            ></iframe>
+          </div>
         </div>
       `,
       this
@@ -82,7 +82,7 @@ export class CodeEditor extends HTMLElement {
     this.client.updatePreview({
       files: {
         "/index.html": {
-          code: `<div id="app" style="font-size: 3.5vh"></div>`,
+          code: `<div id="app" style="font-size: 2.5vw"></div>`,
         },
         "/utils.ts": {
           code: `export function log(tolog){document.getElementById(

@@ -1,0 +1,47 @@
+/* Tooltip container */
+/* 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+} */
+
+[data-trailer-type="text-explainer"] {
+  position: relative;
+  border-bottom: 0.1vw solid black;
+}
+
+[data-trailer-type="text-explainer"]:hover {
+  border-bottom: 0vw dashed black;
+}
+
+/* Tooltip text */
+[data-trailer-type="text-explainer"] [data-trailer-text] {
+  visibility: hidden;
+  width: 40vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 2vw;
+  border-radius: 1vw;
+
+  /* top: 100%; */
+  /* left: 50%; */
+  /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-top: 5vw;
+  /* margin-left: -150%; */
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+[data-trailer-type="text-explainer"]:hover [data-trailer-text] {
+  visibility: visible;
+}
+
+[data-trailer-type="text-explainer"] [data-trailer-text="top"] {
+  margin-top: -15vw;
+  margin-left: -50%;
+}

@@ -1,11 +1,22 @@
 # TypeBox Zero To TypeBox Hero.
 
-## Outline
+[Presentation](https://zero-to-hero-76220.web.app/)
 
-  - Prerequisite
-  - TypeBox - JSON Schema Type Builder with Static Type Resolution for TypeScript
-  - Your first schema
-  - Validation with AJV
-  - Arrays and tuples
-  - Optional
-  - Unions
+## Tasks
+
+```bash
+git clone git@github.com:AndersCan/zero-to-hero.git
+cd zero-to-hero/typebox
+npm install
+```
+
+Tasks are found inside `tasks/`.
+
+Run them with `npx tsx tasks/x.ts`
+
+## Other use cases
+
+Generate forms from Schemas
+https://rjsf-team.github.io/react-jsonschema-form/
+
+`examples/my-object.json` uses schema for autocomplete

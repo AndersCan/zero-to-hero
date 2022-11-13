@@ -26,7 +26,8 @@ export function initEditor(
 ) {
   let formattedCode = prettier.format(code, {
     parser: "typescript",
-    printWidth: 40,
+    printWidth: 30,
+
     plugins: [parserTypescript],
   });
 

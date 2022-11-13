@@ -1,0 +1,32 @@
+/* https://codepen.io/jh3y/pen/yLEbapo */
+
+@property --move {
+  syntax: "<percentage>";
+  initial-value: 100%;
+  inherits: false;
+}
+
+.animated-text {
+  --bg-size: 400%;
+  --color-one: hsl(40, 100%, 50%);
+  --color-two: hsl(40, 100%, 70%);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    var(--move) 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .animated-text {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      --move: 400%;
+    }
+  }
+}
